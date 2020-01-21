@@ -175,15 +175,24 @@ input[id="password"]:focus, input[id="password"]:active {
   color: #fff;
 }
 
+.hider {
+  display: none;
+}
+
+.source--link {
+  position: fixed;
+  right: 2%;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
 .u-uppercase {
   text-transform: uppercase;
 }
 
 .u-text-align-center {
   text-align: center;
-}
-
-.hider {
-  display: none;
 }
 /*# sourceMappingURL=style.css.map */

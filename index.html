@@ -9,17 +9,19 @@
         <script src="script.js" type="text/javascript"></script>
     </head>
     <body>
+        <a href="https://github.com/kishoreganesaan/password-generator" class="source--link">view source code</a>
         <div class= 'password--container'>
+            
             <h1 class="password--heading">Password Generator</h1>
             <div class="password--input_container" onclick="copyPassword()">
-                <input type="text" id = 'password' class="container--background u-text-align-center" placeholder = 'CLICK GENERATE' onclick="copyPassword()">
+                <input type="text" readonly id = 'password' class="container--background u-text-align-center" placeholder = 'CLICK GENERATE' onclick="copyPassword()">
                 <span class="copy_text hider" onclick="copyPassword()">click to copy</span>
             </div>
             <div class="password--input_container container--background">
                 <span class="password--length_title u-uppercase" id = 'password_length'>Length: 8</span>
                 <span class="password--length_min">4</span>
                 <span class="password--length_max">32</span>
-                <input type="range" class="password--length" min="0" max="32" value = '8' onmousemove="silderValue(this.value)"
+                <input type="range" class="password--length" min="4" max="32" value = '8' onmousemove="silderValue(this.value)"
                 onchange="silderValue(this.value)" id = 'length'>
             </div>
             <div class="password--input_container container--background">
