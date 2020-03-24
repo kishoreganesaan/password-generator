@@ -1,4 +1,4 @@
-# password-generator
+# Password Generator
 1. It allows to create random passwords that are and difficult to interpret or predict, due
 to a mix of uppercase and lowercase letters, numbers and symbols.
 
