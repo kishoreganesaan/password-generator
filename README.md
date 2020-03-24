@@ -4,4 +4,5 @@ to a mix of uppercase and lowercase letters, numbers and symbols.
 
 2. You can also create password generator templates to generate passwords. After you
 have selected your mode and settings, you can then create your template
-# Demo - https://kishoreganesaan.github.io/password-generator
+
+Demo - https://kishoreganesaan.github.io/password-generator
