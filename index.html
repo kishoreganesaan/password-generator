@@ -1,49 +1,75 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            Password Generator
-        </title>
-        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,500,600,600i,700,800" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <script src="script.js" type="text/javascript"></script>
-    </head>
-    <body>
-        <a href="https://github.com/kishoreganesaan/password-generator" class="source--link">view source code</a>
-        <div class= 'password--container'>
-            
-            <h1 class="password--heading">Password Generator</h1>
-            <div class="password--input_container" onclick="copyPassword()">
-                <input type="text" readonly id = 'password' class="container--background u-text-align-center" placeholder = 'CLICK GENERATE' onclick="copyPassword()">
-                <span class="copy_text hider" onclick="copyPassword()">click to copy</span>
-            </div>
-            <div class="password--input_container container--background">
-                <span class="password--length_title u-uppercase" id = 'password_length'>Length: 8</span>
-                <span class="password--length_min">4</span>
-                <span class="password--length_max">32</span>
-                <input type="range" class="password--length" min="4" max="32" value = '8' onmousemove="silderValue(this.value)"
-                onchange="silderValue(this.value)" id = 'length'>
-            </div>
-            <div class="password--input_container container--background">
-                <span class="password--length_title u-uppercase">Setting</span>
-                <span >Include Uppercase</span>
-                <input type="checkbox" checked id = 'include_uppercase'>
-            </div>
-            <div class="password--input_container container--background">
-                <span >Include Lowercase</span>
-                <input type="checkbox" checked id = 'include_lowercase'>
-            </div>
-            <div class="password--input_container container--background">
-                <span >Include Numbers</span>
-                <input type="checkbox" id = 'include_number'>
-            </div>
-            <div class="password--input_container container--background">
-                <span>Include Symbols</span>
-                <input type="checkbox" id = 'include_symbol'>
-            </div>
-            <button class="button--generate container--background" onclick="generatePassword()">
-                Generate Password
-            </button>
-        </div>
-    </body>
+  <head>
+    <title>Password Generator</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="pg">
+      <h1 class="pg__heading">Password Generator</h1>
+      <div class="u-pos-relative" onclick="copyPassword()">
+        <input
+          type="text"
+          readonly
+          id="password"
+          class="pg__password pg__bg u-text-align-center"
+          placeholder="CLICK GENERATE"
+          onclick="copyPassword()"
+        />
+        <span class="pg__password--copy u-hide" onclick="copyPassword()"
+          >click to copy</span
+        >
+      </div>
+      <div class="u-pos-relative pg__bg">
+        <span class="pg__slider--title u-uppercase" id="length">Length: 8</span>
+        <span class="pg__slider--min">8</span>
+        <span class="pg__slider--max">32</span>
+        <input
+          type="range"
+          class="pg__slider"
+          min="8"
+          max="32"
+          value="8"
+          onmousemove="handleOnSlideChange(this.value)"
+          onchange="handleOnSlideChange(this.value)"
+          id="range"
+        />
+      </div>
+      <div class="u-pos-relative pg__bg">
+        <span class="pg__slider--title u-uppercase">Setting</span>
+        <span>Include Uppercase</span>
+        <input
+          type="checkbox"
+          checked
+          id="include_uppercase"
+          class="pg__switch"
+        />
+      </div>
+      <div class="u-pos-relative pg__bg">
+        <span>Include Lowercase</span>
+        <input
+          type="checkbox"
+          checked
+          id="include_lowercase"
+          class="pg__switch"
+        />
+      </div>
+      <div class="u-pos-relative pg__bg">
+        <span>Include Numbers</span>
+        <input type="checkbox" id="include_number" class="pg__switch" />
+      </div>
+      <div class="u-pos-relative pg__bg">
+        <span>Include Symbols</span>
+        <input type="checkbox" id="include_symbol" class="pg__switch" />
+      </div>
+      <button class="pg__btn pg__bg" onclick="generateSelectedString()">
+        Generate Password
+      </button>
+    </div>
+    <script src="script.js" type="text/javascript"></script>
+  </body>
 </html>
